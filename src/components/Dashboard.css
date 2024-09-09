@@ -1,0 +1,257 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  height: 100%;
+  background-color: white;
+}
+
+.dashboard {
+  display: flex;
+  height: 100vh;
+  background-color: white;
+}
+
+.menu-toggle-container {
+  position: absolute;
+  top: 20px;
+  right: -60px;
+  z-index: 1001;
+  transition: right 0.3s ease-in-out;
+}
+
+.side-menu.open .menu-toggle-container {
+  right: 20px;
+}
+
+.menu-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.hamburger {
+  width: 30px;
+  height: 20px;
+  position: relative;
+}
+
+.hamburger span {
+  display: block;
+  position: absolute;
+  height: 3px;
+  width: 100%;
+  background: #4a90e2;
+  border-radius: 3px;
+  opacity: 1;
+  left: 0;
+  transform: rotate(0deg);
+  transition: .25s ease-in-out;
+}
+
+.side-menu.open .hamburger span {
+  background: white;
+}
+
+.menu-toggle:hover .hamburger span {
+  background: #2a6fc7;
+}
+
+.hamburger span:nth-child(1) {
+  top: 0px;
+}
+
+.hamburger span:nth-child(2) {
+  top: 8px;
+}
+
+.hamburger span:nth-child(3) {
+  top: 16px;
+}
+
+.side-menu.open .hamburger span:nth-child(1) {
+  top: 8px;
+  transform: rotate(135deg);
+}
+
+.side-menu.open .hamburger span:nth-child(2) {
+  opacity: 0;
+  left: -60px;
+}
+
+.side-menu.open .hamburger span:nth-child(3) {
+  top: 8px;
+  transform: rotate(-135deg);
+}
+
+.side-menu {
+  position: fixed;
+  top: 0;
+  left: -200px;
+  width: 200px;
+  height: 100%;
+  background-color: #4a90e2;
+  transition: left 0.3s ease-in-out;
+  z-index: 1000;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.side-menu.open {
+  left: 0;
+}
+
+.side-menu nav {
+  padding: 60px 1rem 1rem;
+}
+
+.side-menu ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.side-menu li {
+  margin-bottom: 1rem;
+}
+
+.side-menu button {
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-size: 1.2rem;
+  font-family: 'Poppins', sans-serif;
+  transition: opacity 0.3s ease;
+  padding: 10px 15px;
+  width: 100%;
+  text-align: left;
+}
+
+.side-menu button:hover {
+  opacity: 0.8;
+}
+
+.dashboard-content {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  transition: margin-left 0.3s ease-in-out;
+}
+
+.dashboard-content.shifted {
+  margin-left: 200px;
+}
+
+.welcome-screen {
+  text-align: center;
+}
+
+.welcome-screen h2 {
+  color: #4a90e2;
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.welcome-screen p {
+  color: #666;
+  font-size: 1.4rem;
+}
+
+.hobbies-screen {
+  width: 100%;
+  max-width: 600px;
+  text-align: center;
+}
+
+.hobbies-screen h2 {
+  color: #4a90e2;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.hobbies-list {
+  list-style-type: none;
+  padding: 0;
+  margin-bottom: 2rem;
+}
+
+.hobbies-list li {
+  background-color: #f0f0f0;
+  border-radius: 5px;
+  padding: 10px 15px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.remove-hobby {
+  background: none;
+  border: none;
+  color: #ff4d4d;
+  font-size: 1.2rem;
+  cursor: pointer;
+  padding: 0 5px;
+}
+
+.add-hobby-form {
+  display: flex;
+  gap: 10px;
+}
+
+.add-hobby-form input {
+  flex-grow: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.add-hobby-form button {
+  background-color: #4a90e2;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.add-hobby-form button:hover {
+  background-color: #3a7bc8;
+}
+
+.near-you-screen {
+  width: 100%;
+  max-width: 800px;
+  text-align: center;
+}
+
+.near-you-screen h2 {
+  color: #4a90e2;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.get-location-btn {
+  background-color: #4a90e2;
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  transition: background-color 0.3s ease;
+}
+
+.get-location-btn:hover {
+  background-color: #3a7bc8;
+}
