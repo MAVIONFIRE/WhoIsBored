@@ -1,0 +1,6 @@
+npm install react-router-dom
+npm install @react-google-maps/api
+npm install react-leaflet leaflet
+npm install axios react-router-dom
+npm install -D nodemon
+npm install express mongoose bcryptjs jsonwebtoken cors dotenv
