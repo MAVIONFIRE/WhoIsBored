@@ -1,0 +1,103 @@
+.hobbies-screen {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .hobbies-screen h2 {
+    color: #4a90e2;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+    text-align: center;
+  }
+  
+  .hobbies-container {
+    display: flex;
+    width: 100%;
+  }
+  
+  .category-bar {
+    display: flex;
+    flex-direction: column;
+    width: 150px;
+    margin-right: 20px;
+  }
+  
+  .category-bar button {
+    background-color: #f0f0f0;
+    border: none;
+    padding: 15px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+    text-align: left;
+  }
+  
+  .category-bar button.active {
+    background-color: #4a90e2;
+    color: white;
+  }
+  
+  .hobby-options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    flex-grow: 1;
+  }
+  
+  .hobby-option {
+    background-color: #f0f0f0;
+    border: none;
+    padding: 15px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    flex-basis: calc(33.333% - 10px);
+    text-align: center;
+  }
+  
+  .hobby-option:hover {
+    background-color: #e0e0e0;
+  }
+  
+  .hobby-option.selected {
+    background-color: #4a90e2;
+    color: white;
+  }
+  
+  @media (max-width: 768px) {
+    .hobbies-container {
+      flex-direction: column;
+    }
+  
+    .category-bar {
+      width: 100%;
+      flex-direction: row;
+      margin-bottom: 20px;
+    }
+  
+    .category-bar button {
+      flex-grow: 1;
+      margin-right: 10px;
+      margin-bottom: 0;
+    }
+  
+    .hobby-option {
+      flex-basis: calc(50% - 5px);
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .hobby-option {
+      flex-basis: 100%;
+    }
+  }
+
+  .no-hobbies-message {
+    color: #ff4d4d;
+    font-size: 1.2rem;
+    text-align: center;
+    margin-bottom: 20px;
+  }

@@ -1,0 +1,31 @@
+.friend-card {
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .friend-card h3 {
+    color: #4a90e2;
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+  }
+  
+  .friend-card p {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+  }
+  
+  .friend-card ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .friend-card li {
+    background-color: #e0e0e0;
+    border-radius: 5px;
+    padding: 5px 10px;
+    margin-bottom: 5px;
+    display: inline-block;
+    margin-right: 5px;
+  }
