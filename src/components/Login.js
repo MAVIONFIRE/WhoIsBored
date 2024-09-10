@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import './Login.css';
+import './css/Login.css';
 
 const mockAuth = (username, password, email) => {
   return new Promise((resolve, reject) => {
